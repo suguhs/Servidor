@@ -8,7 +8,7 @@ $num1=rand(1, 100);
 $num2=rand(1, 100);
 
 if($num1>$num2){
-    echo "numero mayor el 1: ".$num1. "\n";
+    echo "numero mayor el 1: ".$num1. "<br>";
     echo "numero menor el 2: ".$num2 ;
 }else{
     echo "numero mayor el 2: ".$num2 ."\n";
