@@ -5,9 +5,9 @@ indique si es primo. Un número primo es aquel que es divisible por el mismo y l
 unidad
 */
 
-function esprimo(){
+function esprimo($num){
 
-    
+
 }
 
 ?>
