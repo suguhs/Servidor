@@ -20,14 +20,14 @@ for ($j = 0; $j < 20; $j++) {
     $sumaColumnas[$j] = 0;
 }
 
-// Sumar los valores de cada columna
+
 for ($i = 0; $i < 20; $i++) {
     for ($j = 0; $j < 20; $j++) {
-        $sumaColumnas[$j] += $matriz[$i][$j];  // Sumar el valor de la columna $j
+        $sumaColumnas[$j] += $matriz[$i][$j];  
     }
 }
 
-// Encontrar la columna con la máxima suma
+
 $colMax = 0;  
 $maxSuma = $sumaColumnas[0];  
 

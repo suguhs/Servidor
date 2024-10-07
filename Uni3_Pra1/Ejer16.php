@@ -16,4 +16,13 @@ $lenguajes_servidor=array(
     'CS' => 'CSS'
   );
 
+  $lenguajes=array_merge($lenguajes_cliente,$lenguajes_servidor);
+
+  echo "<html>\n<body>\n";
+  echo "<table border='1' cellpadding='5'>\n<tr><th>Clave</th><th>Lenguaje</th></tr>\n";
+  foreach ($lenguajes as $clave => $valor) {
+    echo "<tr><td>$clave</td><td>$valor</td></tr>\n";
+  }
+  echo "</table>\n</body>\n</html>";
+
 ?>
