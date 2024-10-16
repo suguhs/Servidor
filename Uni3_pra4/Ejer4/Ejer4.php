@@ -39,6 +39,10 @@ class Vehiculo {
         $this->peso += $peso_persona; // Ajusta el peso del vehículo
         echo "Se ha añadido una persona que pesa $peso_persona kg. Nuevo peso del vehículo: {$this->peso} kg.\n";
     }
+    public function repintar($color) {
+        $this->setColor($color);
+        echo "El vehículo ha sido repintado a $color.\n";
+    }
 }
 
 class Cuatro_Ruedas extends Vehiculo {
@@ -49,10 +53,7 @@ class Cuatro_Ruedas extends Vehiculo {
         $this->numero_puertas = $numero_puertas;
     }
 
-    public function repintar($color) {
-        $this->setColor($color);
-        echo "El vehículo ha sido repintado a $color.\n";
-    }
+   
 }
 
 class Dos_Ruedas extends Vehiculo {
@@ -64,6 +65,8 @@ class Dos_Ruedas extends Vehiculo {
     }
 
     public function poner_gasolina($litros) {
+        $nuevo_peso=$this->getPeso() + $litros;
+        $this->setPeso($nuevo_peso);
         echo "Se han añadido $litros litros de gasolina.\n";
     }
 }
@@ -100,15 +103,10 @@ class Camion extends Cuatro_Ruedas {
     }
 
     public function añadir_remolque($longitud_remolque) {
-        echo "Se ha añadido un remolque de $longitud_remolque metros a un camión de longitud {$this->longitud} metros.\n";
+        $this->$longitud+=$longitud_remolque;
+        echo "La longitud del remolque, $longitud_remolque, se a sumado a la longitud= {this->$longitud}\n";
     }
 }
 
-// Ejemplo de uso en mostrar.php
-$vehiculo = new Vehiculo("Negro", 1500);
-echo $vehiculo;
-echo "\n";
-$vehiculo->circular(); 
-$vehiculo->añadir_persona(70); 
 
 ?>
