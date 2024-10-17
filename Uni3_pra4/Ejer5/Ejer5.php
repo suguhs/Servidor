@@ -36,10 +36,17 @@ abstract class Vehiculo {
     }
 
     public abstract function añadir_persona($peso_persona) {
-        
+    
+    } 
     public function repintar($color) {
         $this->setColor($color);
         echo "El vehículo ha sido repintado a $color.\n";
+    }
+    public static function ver_atributo(){
+        $atributos = get_object_vars($this); // Obtener todos los atributos del objeto
+        foreach ($atributos as $nombre => $valor) {
+            echo "$nombre: $valor\n"; 
+        }
     }
 }
 
@@ -50,7 +57,7 @@ class Cuatro_Ruedas extends Vehiculo {
         parent::__construct($color, $peso); // Llama al constructor de Vehiculo
         $this->numero_puertas = $numero_puertas;
     }
-    public abstract function añadir_persona($peso_persona) {
+    public function añadir_persona($peso_persona) {
         $this->peso += $peso_persona; // Ajusta el peso del vehículo
         echo "Se ha añadido una persona que pesa $peso_persona kg. Nuevo peso del vehículo: {$this->peso} kg.\n";
     }
@@ -70,8 +77,8 @@ class Dos_Ruedas extends Vehiculo {
         $this->setPeso($nuevo_peso);
         echo "Se han añadido $litros litros de gasolina.\n";
     }
-    public abstract function añadir_persona($peso_persona) {
-        $this->peso += $peso_persona; // Ajusta el peso del vehículo
+    public function añadir_persona($peso_persona) {
+        $this->peso += ($peso_persona+2); // Ajusta el peso del vehículo
         echo "Se ha añadido una persona que pesa $peso_persona kg. Nuevo peso del vehículo: {$this->peso} kg.\n";
     }
     
