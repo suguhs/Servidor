@@ -30,10 +30,10 @@ class Dos_Ruedas extends Vehiculo{
 class Coche extends Cuatro_Ruedas{
     private $nuemro_cadenas_nieve;
 
-    public function añadir_cadenas_nieve(num){
+    public function añadir_cadenas_nieve($num){
 
     }
-    public function quitar_cadenas_nieve(num){
+    public function quitar_cadenas_nieve($num){
 
     }
 }
@@ -41,7 +41,7 @@ class Coche extends Cuatro_Ruedas{
 class Camion extends Cuatro_Ruedas{
     private $longitud;
 
-    public function añadir_remolque(longitud_remolque){
+    public function añadir_remolque($longitud_remolque){
 
     }
 }

@@ -30,6 +30,10 @@ class Operaciones {
             return "División por cero no es posible.";
         }
     }
+
+    public function __toString(){
+        return "Numero 1: ". $this->numero1. " Numero 2: ". $this->numero2;
+    }
 }
 
 
