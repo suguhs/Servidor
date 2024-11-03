@@ -1,0 +1,5 @@
+3. ¿Qué acción realizará la siguiente línea de código html?
+<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+
+method="post": hace que los datos se manden al servidor y que se puedan recoger con POST.
+"<?php echo $_SERVER["PHP_SELF"];?>"

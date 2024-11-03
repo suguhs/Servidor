@@ -1,0 +1,16 @@
+Después de analizar las funciones anteriores que resultado produciría la siguiente
+función:
+
+function test_entrada($valor) {
+ $valor = trim($valor);
+ $valor = stripslashes($valor);
+ return $valor;
+}
+
+al llamar a la funcion lo que pasaria seria que estaria eliminando los espacios de 
+delante y detras del string y tambien estaria eliminando las barras lateralas que hubira.
+por lo que en el caso de que el $valor fuera " Es tu nombre O\'reilly? " imprimiria lo siguiente
+al retornar $valor:
+
+$valor = "Es tu nombre O'reilly?";
+
