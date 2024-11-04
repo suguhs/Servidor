@@ -1,0 +1,2 @@
+Este código HTML crea dos botones de opción para seleccionar el género (Mujer u Hombre). Si una opción ya fue seleccionada previamente, 
+se mantiene marcada tras enviar el formulario. Además, muestra un mensaje de error si el campo está vacío o no cumple con los requisitos.

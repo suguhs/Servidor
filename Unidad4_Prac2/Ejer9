@@ -1,0 +1,8 @@
+9. Desarrollar una función en PHP que reciba un EMAIL y valide si este es correcto, la
+función se llamará funcion_validar_email.php
+
+<?php
+function validarEmail($email) {
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+?>

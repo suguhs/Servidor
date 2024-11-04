@@ -1,5 +1,6 @@
-3. ¿Qué acción realizará la siguiente línea de código html?
-<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+method="post": establece que el formulario enviará los datos al servidor utilizando el método HTTP POST. 
+Esto significa que los datos no se incluirán en la URL, lo que es más seguro para datos sensibles como contraseñas.
 
-method="post": hace que los datos se manden al servidor y que se puedan recoger con POST.
-"<?php echo $_SERVER["PHP_SELF"];?>"
+action="<?php echo $_SERVER["PHP_SELF"];?>": esta parte utiliza PHP para establecer la URL de envío del formulario.
+ $_SERVER["PHP_SELF"] devuelve el nombre del archivo PHP que se está ejecutando en ese momento. Al usar <?php echo $_SERVER["PHP_SELF"];?>
+  en el atributo action, el formulario se enviará de nuevo al mismo archivo PHP en el que se encuentra el formulario.

@@ -1,0 +1,7 @@
+
+7.Las expresiones regulares en PHP, qué son y para qué sirven?
+
+
+Las expresiones regulares en PHP son patrones que permiten buscar y manipular cadenas de texto. 
+Se utilizan para validar formatos de entrada, como correos electrónicos o contraseñas,asegurando que cumplan con criterios específicos. 
+Son herramientas poderosas para la validación y búsqueda de texto en aplicaciones.

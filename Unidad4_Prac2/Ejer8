@@ -1,0 +1,15 @@
+8. Evalúa el siguiente código PHP e indica que hace, ¿para qué sirve la función
+preg_match?, ¿qué parámetros necesita y qué retorna
+
+ if (empty($_POST["name"])) {
+ $nameErr = "El nombre es obligatorio";
+ } else {
+ $name = test_input($_POST["name"]);
+ if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+ $nameErr = "Únicamente se permiten letras y espacios";
+ }
+ }
+
+El código verifica si el campo "name" enviado a través de un formulario está vacío. Si lo está, asigna un mensaje de error a $nameErr. 
+Luego, utiliza preg_match para comprobar si el nombre ingresado solo contiene letras y espacios. Si el patrón no coincide,
+se actualiza $nameErr con un mensaje de error correspondiente.
