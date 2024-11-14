@@ -33,7 +33,7 @@
     echo "</div>";
     ?>
 
-    <form action="ejercicio21.php" method="POST">
+    <form action="ejer2.php" method="POST">
         <label for="decimal">Introduce el número en decimal:</label>
         <input type="number" name="decimal" min="0" max="15" required>
         <button type="submit">Comprobar</button>
