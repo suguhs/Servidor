@@ -21,7 +21,7 @@
     
     echo "<p>El número binario generado es: " . $binario_str . "</p>";
     
-    // Colocar las imágenes en fila
+   
     echo "<div>";
     for ($i = 0; $i < 4; $i++) {
         if ($binario[$i] == 1) {
