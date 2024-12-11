@@ -25,7 +25,7 @@
         <br>
     </form>
 
-    <form action="comprobaciones.php" method="post">
+    <form action="resultado.php" method="post">
         <h2><span>Pareja: </span>
         <input type="number" id="x" name="x" required>
         <input type="number" id="y" name="y" required>
