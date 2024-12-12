@@ -1,7 +1,8 @@
 <?php
+ require_once 'login.php';
   session_start();
-  $combi = $_SESSION["posicion"];
-  var_dump($combi);
+  $aciertos=0;
+  $fallos=0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +22,23 @@
         <button type="submit" name="enviar" value="0">Enviar</button>
         <br>
     </form>
+      <a src="puntos.php">Ver Puntos Por Jugador</a>
+      <a src="resultados.php">Resultados del Dia </a>
     </div>
+    <?php
+      if (isset($_POST['solu'])) {
+        $query = "SELECT solucion FROM solucion WHERE fecha like `2024-12-12`";
+        $result = $conn->query($query);
+        if($_POST['solu']=="$result"){
+          $aciertos++;
+        }else{
+          $fallos--;
+        }
+        $solu = $_POST['solu'];
+        $solu= $_SESSION[`solu`];
+        $aciertos= $_SESSION[$aciertos];
+        $fallos=$_SESSION[$fallos];
+    }
+    ?>
 </body>
 </html>
